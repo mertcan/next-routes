@@ -31,7 +31,8 @@
     ]
   },
   "dependencies": {
-    "path-to-regexp": "^2.1.0"
+    "path-to-regexp": "^2.1.0",
+    "query-string": "^6.8.3"
   },
   "peerDependencies": {
     "next": ">=2",
@@ -39,7 +40,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.47",
-    "@babel/core": "^7.0.0-beta.47",
+    "@babel/core": "^7.6.3",
     "@babel/preset-env": "^7.0.0-beta.47",
     "@types/next": "^2.4.8",
     "@types/node": "^10.1.2",
@@ -49,8 +50,8 @@
     "concurrently": "^3.5.0",
     "coveralls": "^3.0.0",
     "del-cli": "^1.1.0",
-    "jest": "^22.4.3",
-    "next": "^6.0.0",
+    "jest": "^25.0.0",
+    "next": "^9.1.1",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
