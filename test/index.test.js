@@ -62,7 +62,7 @@ describe('Routes', () => {
   test('match and merge params into query', () => {
     const routes = nextRoutes().add('a').add('b', '/:a?/b/:b').add('c')
     const { query } = routes.match('/b/b?b=x&c=c')
-    expect(query).toMatchObject({ b: 'b', c: 'c' })
+    expect(query).toMatchObject({ b: 'b' })
     expect(query).not.toHaveProperty('a')
   })
 

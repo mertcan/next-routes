@@ -3,7 +3,7 @@ import React from 'react'
 import { parse } from 'url'
 import NextLink from 'next/link'
 import NextRouter from 'next/router'
-import { stringify } from 'query-string'
+import { stringify, parse as parser } from 'query-string'
 
 module.exports = opts => new Routes(opts)
 
@@ -47,7 +47,8 @@ class Routes {
 
   match (url) {
     const parsedUrl = parse(url, true)
-    const { pathname, query } = parsedUrl
+    const { pathname } = parsedUrl
+    const { query } = parser(url, { arrayFormat: 'bracket' })
 
     return this.routes.reduce((result, route) => {
       if (result.route) return result
