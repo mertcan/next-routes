@@ -49,6 +49,8 @@ export default class Routes implements Registry {
   add(name: string, pattern?: string, page?: string): this;
   add(pattern: string, page: string): this;
   add(options: { name: string; pattern?: string; page?: string }): this;
+  match(path: string): { route: { name: string; } };
+  findAndGetUrls(name: string, params: RouteParams): { urls: { as: string; } };
   Link: ComponentType<LinkProps>;
   Router: Router;
 }
